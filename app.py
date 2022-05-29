@@ -1,5 +1,4 @@
 from flask import Flask,json,Response,request,render_template
-from werkzeug.utils import secure_filename
 from os import path,getcwd
 from db import Database
 from face import Face
@@ -76,7 +75,7 @@ def train():
             name = request.form['name']
             print("Information of that face",name)
             print("File is allowed and will be saved in ",app.config['store'])
-            filename = secure_filename(file.filename)
+            filename = file.filename
             trained_storage = path.join(app.config['store'],'trained')
             file.save(path.join(trained_storage,filename))
             print("new file name is ",filename)
@@ -124,7 +123,7 @@ def recognize():
         if file.mimetype not in app.config['file_allowed']:
             return error_handle("File extension is not allowed")
         else:
-            filename = secure_filename(file.filename)
+            filename = file.filename
             unknown_storage = path.join(app.config["store"],'unknown')
             file_path = path.join(unknown_storage,filename)
             file.save(file_path)
