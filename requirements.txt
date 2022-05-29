@@ -120,7 +120,6 @@ pyttsx==1.1
 pyttsx3==2.90
 pytz==2021.1
 pytz-deprecation-shim==0.1.0.post0
-pywin32==304
 pywinpty==2.0.5
 pyzmq==23.0.0
 regex==2021.4.4
