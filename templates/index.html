@@ -12,21 +12,21 @@
 
 
 </head>
-<body>
 
+<body>
 <div class="container">
-    <h1>Facial Recognition</h1>
+    <h1 id="heading1">Facial Recognition</h1>
     <ul class="tabs">
        <li data-section="train-content">Train it</li>
         <li data-section="recognize-content">Recognize</li>
     </ul>
     <div id="train-content">
-        <h2>Train it</h2>
+        <h3>Train it</h3>
         <form method = "post" id="train">
             <div class="message">
 <!--                <p class="success">Training process has been done</p>-->
             </div>
-            <p class="description">Pre-training our service.Upload an image contain the face and give it full name for recognize later</p>
+            <p class="description">Pre-training our service.Upload the image of the lost person.</p>
             <div class="form-item">
                 <label for="input-file">Face image</label>
                 <input type ="file" name="file" id="input-file" accept = "image/*"/>
@@ -42,12 +42,12 @@
     </div>
 
     <div id="recognize-content">
-        <h2>Recognize it</h2>
+        <h3>Recognize it</h3>
         <form method = "post" id="recognize">
             <div class="message">
 <!--                <p class="success">Training process has been done</p>-->
             </div>
-            <p class="description">Upload an image and i will tell you who is in the picture.</p>
+            <p class="description">Upload the image of the found person</p>
             <div class="form-item">
                 <label for="input-file">Image</label>
                 <input type ="file" name="file" id="recognize-input-file" accept = "image/*"/>
